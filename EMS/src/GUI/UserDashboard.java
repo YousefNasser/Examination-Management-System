@@ -8,7 +8,6 @@ package GUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
-import com.sun.xml.internal.ws.util.StringUtils;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import Entities.*;
@@ -48,7 +47,7 @@ public class UserDashboard extends Page{
     private void greetUser() {
         // Capitalizing first letter of userName
         String userName = user.getFirstName();
-        userName = StringUtils.capitalize(userName);
+        userName = userName.toUpperCase();
         getTitleLabel().setText("Hello " + userName);
     }
     
